@@ -1,9 +1,17 @@
 ;;Michael Essmyer
 ;;CS441 Spring 
 ;;Clojure Project
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Practice Fibanacci Sequence
 $ java -cp clojure-1.0.0.jar clojure.lang.Repl
 Clojure 1.0.0-
-user=>
+user=>(defn fib [n] 
+    (if (= n 0) 0
+        (if (= n 1) 1
+            (+ (fib (- n 1)) (fib (- n 2))))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;;input list a coins ranging from 1 to 100
 
 ;;create player A and B
