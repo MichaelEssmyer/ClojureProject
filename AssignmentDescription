@@ -1,0 +1,20 @@
+Consider a simple 2-player game played as follows: An even number of coins is laid out in a row. 
+Taking turns, each player removes the coin on one of the ends of the row. 
+The object is to have the highest value in coins when all coins have been taken. 
+Note that a greedy strategy of taking the largest- value end coin is not sufficient. Consider this situation:
+5 25 10 1
+In this case, the player should take the 1 on the right end; after the opponent takes either the 5 or the 10,
+the player is guaranteed to get the 25. Simply taking the 5 “because it’s bigger” will result in the biggest coin going to the other player.
+This does point to one strategy, at least for the first player: Number the coins 1-N from left to right. 
+Find the sum of all of the even-numbered coins, and all the odd-numbered coins. 
+If the sum of the odd numbered coins is higher, take the leftmost coin; otherwise take the rightmost. 
+Of course, the opponent can take a coin from either end—which will then leave the player with the same choice, with one of 2 slightly different configurations. 
+The recursive algorithm is obvious. Your Clojure program will implement this. 
+Note that the opposing player can use the result of a recursive search to make their own selection:
+A makes a choice based on even/odd.
+B now has a choice, with an odd number of coins. 
+However, B can check 2 possibilities: If I take the leftmost, leaving A with one row of coins, how does that compare with taking the rightmost and leaving A with a slightly different choice?
+You are given 2 data files, one small enough to check by hand for algorithmic correctness, the other much larger, for you to test multithreading. 
+Run your program on the larger data file, adding code to find the running time needed to find the final score assuming both players follow their respective strategy and always take whatever move is best for them. Then run the code with 2, 4, 8, 16, and 32 threads, and compare the time needed. Run the code 2 or 3 times with each number of threads, and compare average times as a function of the thread count. Prepare a short report (a page or two) summarizing your findings, and explaining the results you find.
+Submit your Clojure source file and your results. 
+Your code will be run against a different data file of the same format as a check.
