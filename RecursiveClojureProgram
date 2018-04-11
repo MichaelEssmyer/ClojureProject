@@ -1,1 +1,18 @@
+;;Michael Essmyer
+;;CS441 Spring 
+;;Clojure Project
+
+;;input list a coins ranging from 1 to 100
+
+;;create player A and B
+
+;;A => Number the coins 1-N from left to right. 
+;;Find the sum of all of the even-numbered coins, and all the odd-numbered coins. 
+;;If the sum of the odd numbered coins is higher, take the leftmost coin; otherwise take the rightmost.
+
+;;B => Number the coins 1-N from left to right. 
+;;Find the sum of all of the even-numbered coins, and all the odd-numbered coins. 
+;;If the sum of the odd numbered coins is higher, take the leftmost coin; otherwise take the rightmost.
+
+;;A and B recursively cylce leaving the other with the worst possible advantage
 
