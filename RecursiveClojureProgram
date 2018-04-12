@@ -24,10 +24,10 @@ user=>(defn fib [n]
 ;;A => Number the coins 1-N from left to right. 
 ;;Find the sum of all of the even-numbered coins, and all the odd-numbered coins. 
 ;;If the sum of the odd numbered coins is higher, take the leftmost coin; otherwise take the rightmost.
-(for-loop [i 0 (< i 10) (inc i)]
+user=>(defn (for-loop [i 0 (< i 10) (inc i)]
     if(i%2=0)( onum += i)
     else(enum += i)
-)
+))
 ;;B => Number the coins 1-N from left to right. 
 ;;Find the sum of all of the even-numbered coins, and all the odd-numbered coins. 
 ;;If the sum of the odd numbered coins is higher, take the leftmost coin; otherwise take the rightmost.
