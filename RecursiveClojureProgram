@@ -13,6 +13,11 @@ user=>(defn fib [n]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;input list a coins ranging from 1 to 100
+(use 'clojure.java.io)
+
+(defn get-lines [10.txt]
+  (with-open [r (reader 10.txt)]
+    (doall (line-seq r))))
 
 ;;create player A and B
 
